@@ -40,10 +40,46 @@
         <div id="chooseDrink">
             <h2> Dryck </h2>
             <script>createDrinkMenu()</script>
+            
+ <!--            <div class="dropdown">
+                <button onclick="buttonFunction2()" class="dropButton" Välj dryck></button>
+                <div id="myDropdown" class="dropdown-content">
+                     
+                </div>
+            </div>
+            <form action="">
+                <input type="radio" name="smak" value="nypon"> nypon 35:-<br>
+                <input type="radio" name="smak" value="blåbär"> blåbär 35:-<br>
+                <input type="radio" name="smak" value="lingon"> lingon 35:-
+            </form> -->
+
+            <button type="submit" onclick="buttonFunction1()"> Skicka beställning </button>
         </div>
 
         <hr> 
 
+        <section class="info">
+            
+            <fieldset>
+            <p> <label for="info">Fyll i dina uppgifter</label> <br>
+                <input type="text" id="firstname" name="fn" required="required" placeholder="First name">
+                * <!-- skriven stjärna för att indikera krav-->
+                <!-- det finns också typ number och url-->
+                <a href="http://www.w3schools.com/html/html_form_input_types.asp"> här finns mer info om html-input types </a>
+            </p>
+            <p>
+                <input type="text" id="lastname" name="ln" placeholder="Last name">
+            </p>
+            <p>
+                <input type="email" id="email" name="em" required="required" placeholder="Email address">
+                * <!-- skriven stjärna för att indikera krav-->
+            </p>
+            <input type="submit" value="Submit">
+            </fieldset>
+            
+
+        </section>
+        
         <section id="dryck">
             
             <h2> Dryck (andra rutan)</h2>
@@ -99,29 +135,9 @@
             
         </section>
                
+    
         
-        <section class="info">
-            
-            <fieldset>
-            <p> <label for="info">Fyll i dina uppgifter</label> <br>
-                <input type="text" id="firstname" name="fn" required="required" placeholder="First name">
-                * <!-- skriven stjärna för att indikera krav-->
-                <!-- det finns också typ number och url-->
-                <a href="http://www.w3schools.com/html/html_form_input_types.asp"> här finns mer info om html-input types </a>
-            </p>
-            <p>
-                <input type="text" id="lastname" name="ln" placeholder="Last name">
-            </p>
-            <p>
-                <input type="email" id="email" name="em" required="required" placeholder="Email address">
-                * <!-- skriven stjärna för att indikera krav-->
-            </p>
-            <input type="submit" value="Submit">
-            </fieldset>
-            
-
-        </section>
-                <section class="burgare" id='burgare'>
+        <section class="burgare" id='burgare'>
 
             <hr> <h2> Burgare (andra rutan) </h2>
             

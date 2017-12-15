@@ -37,8 +37,38 @@ function createDrinkMenu(){
         burgerMenu.appendChild(bildVariabel);
         
         burgerMenu.innerHTML+= "<br>";
+        createCheckbox();
+        burgerMenu.innerHTML+= "<br>";
+        burgerMenu.innerHTML+= "<br>";
    }
 }
+
+function createCheckbox(){
+    var drinkMenu = document.getElementById("chooseDrink");
+    var checkbox=document.createElement("input");
+    checkbox.type = "checkbox";
+    checkbox.name = "name";
+    checkbox.id = "checkboxID";
+    
+    var label = document.createElement("label");
+    label.htmlFor ="id";
+    label.appendChild(document.createTextNode("nyponsmak"));
+
+    drinkMenu.appendChild(checkbox);
+    drinkMenu.appendChild(label);
+}
+
+
+
+
+function buttonFunction1(){
+    console.log("tryckt på knappen");
+}
+
+function buttonFunction2(){
+    console.log("tryckt på andra knappen");
+}
+
 
 
 
@@ -55,6 +85,7 @@ function functionTömDiv() {
     variabelNamn.innerHTML=" ";
 }
 
+// rester
 
 /*var para = document.createElement("P");
 var t = document.createTextNode(burgare1.info());
