@@ -1,0 +1,128 @@
+/* kommentarer ser ut så här ctrl shift i*/
+@media screen and (aspect-ratio: 16/9){}
+
+body {
+    font-size: 1.5em;
+}
+
+h1 {
+
+}
+
+h2 {
+    text-align: left;
+}
+
+h4 {
+    border-left:dotted red;
+    border-width: thick;
+    background-color: lightgray;
+    border-radius: 8px;
+}
+
+p {
+    font-family:  'Arial', sans-serif;
+    /*color: darkviolet;*/
+    color: #ff0000;
+    font-size: vh;
+}
+
+th {
+    color:rgb(30,255,100);
+}
+
+th:nth-child(even) {
+    color:rgb(30,50,200);
+}
+
+td {
+    width: 29%;
+}
+
+#välkomsttext {
+/*    position: absolute; */
+}
+
+#header {
+    position: relative;
+    font-family: 'Arial', sans-serif;
+    color: deeppink;
+    text-align: center;
+    font-size: 1.5em;
+    border-radius: 8px;
+    background-color: lightgray;
+    opacity: 0.7; 
+    /* background-image: 
+    url("https://images.pexels.com/photos/207247/pexels-photo-207247.jpeg?w=940&h=650&auto=compress&cs=tinysrgb");*/
+    /* background-image:
+    url("https://images.pexels.com/photos/163253/wooden-fishing-pier-pier-recreation-163253.jpeg?w=940&h=650&auto=compress&cs=tinysrgb");*/
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.gluten {
+    color:brown;
+    font-weight: bold;
+}
+
+.laktos {
+    color:dodgerblue;
+    font-weight: bold;
+}
+
+.laktos:hover, .gluten:hover {
+    text-transform: uppercase;
+    font-size: 0.9em;
+}
+
+#burgare {
+    background-color: black;
+    color:antiquewhite;
+    text-align: center;
+    border-radius: 8px;
+    border-bottom:dotted;
+}
+
+#dryck {
+    background-color:bisque;
+    text-align: center;
+    border-radius: 8px;
+    border-top: dotted;
+}
+
+.testområde {
+    text-align: right;
+}
+
+fieldset {
+    margin-right:20em;
+    border: 8px groove;
+}
+
+button:hover {
+    background-color:dimgrey;
+    color: aliceblue;
+    cursor:pointer;
+}
+
+section {
+    margin: 30px; 50px;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+/*BILDER*/
+img {
+    width: 50%;
+}
+
+/*.bildBurgare2{
+    width: 6px;
+}*/
+
+
+/*.sans-serif {font-family: 'Arial', sans-serif;}
+font-family: 'Pacifico', cursive;
+font-family: 'Kanit', sans-serif;
+font-family: 'Indie Flower', cursive;
+/* .monospace{font-family: "Lucida Console", Courier, monospace} */
