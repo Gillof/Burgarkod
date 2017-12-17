@@ -3,20 +3,23 @@ function createBurgerMenu(){
     var bildVariabel = document.createElement("img");
     for (i=0; i<food.length; i++){
         burgerMenu.innerHTML+= food[i].name +"<br>";
-        
+
         if (food[i].lactose == true) {
             burgerMenu.innerHTML+= "Laktos" +"<br>";
         }
-        
+
         if (food[i].gluten) {
             burgerMenu.innerHTML+= "Gluten" +"<br>";
         }
-                
+
         bildVariabel.setAttribute("src", food[i].pictureSrc);
         burgerMenu.appendChild(bildVariabel);
-        
+
         burgerMenu.innerHTML+= "<br>";
-   }
+        createCheckbox("chooseBurger", i);
+        burgerMenu.innerHTML+= "<br>";
+        burgerMenu.innerHTML+= "<br>";        
+    }
 }
 
 function createDrinkMenu(){
@@ -24,45 +27,89 @@ function createDrinkMenu(){
     var bildVariabel = document.createElement("img");
     for (i=0; i<drink.length; i++){
         burgerMenu.innerHTML+= drink[i].name +"<br>";
-        
+
         if (drink[i].lactose == true) {
             burgerMenu.innerHTML+= "Laktos" +"<br>";
         }
-        
+
         if (drink[i].gluten) {
             burgerMenu.innerHTML+= "Gluten" +"<br>";
         }
-                
+
         bildVariabel.setAttribute("src", drink[i].pictureSrc);
         burgerMenu.appendChild(bildVariabel);
-        
+
         burgerMenu.innerHTML+= "<br>";
-        createCheckbox();
+        createCheckbox("chooseDrink", i);
         burgerMenu.innerHTML+= "<br>";
         burgerMenu.innerHTML+= "<br>";
-   }
+    }
 }
 
-function createCheckbox(){
-    var drinkMenu = document.getElementById("chooseDrink");
+function createCheckbox(menuName, IDnr){
+    var drinkMenu = document.getElementById(menuName);
     var checkbox=document.createElement("input");
     checkbox.type = "checkbox";
     checkbox.name = "name";
-    checkbox.id = "checkboxID";
-    
+    checkbox.id = menuName+"_"+IDnr; /*"checkboxID";*/
+
     var label = document.createElement("label");
     label.htmlFor ="id";
-    label.appendChild(document.createTextNode("nyponsmak"));
+    label.appendChild(document.createTextNode("Välj"));
 
     drinkMenu.appendChild(checkbox);
     drinkMenu.appendChild(label);
 }
 
+function fetchCheckedCheckboxes(menuName){
+    var activeCheckbox;
+    var checkedBoxesIndex = [];
+    var loopLength;
+    if (menuName === "chooseBurger") {
+        loopLength = food.length;
+    }
+    else if (menuName === "chooseDrink") {
+        loopLength = drink.length;
+    }
+    for (i=0; i<loopLength; i++){
+        activeCheckbox = document.getElementById(menuName+"_"+i);
+        /*console.log("boxID: "+menuName+"_"+i);*/
+        if (activeCheckbox.checked === true){
+            checkedBoxesIndex.push(i);
+        } 
+    }
+    /*console.log(checkedBoxesIndex);*/
+    return checkedBoxesIndex;
+}
+
+function fromCheckboxToBurger(checkedBurgerIndex){
+    for (i=0; i<checkedBurgerIndex.length; i++){
+        console.log(food[checkedBurgerIndex[i]]);
+    }
+}
+
+function fromCheckboxToDrink(checkedDrinkIndex){
+    for (i=0; i<checkedDrinkIndex.length; i++){
+        console.log(drink[checkedDrinkIndex[i]]);
+    }    
+}
 
 
 
+/*var knappSkickaBeställning = document.getElementbyId("knappSkickaBeställning");
+knappSkickaBeställning.onclick= buttonFunction1();*/
 function buttonFunction1(){
-    console.log("tryckt på knappen");
+    
+    var checkedBurgerIndex = fetchCheckedCheckboxes("chooseBurger");
+    var checkedDrinkIndex =    fetchCheckedCheckboxes("chooseDrink");
+    
+    console.log("Dessa är iklickade");
+    console.log(checkedBurgerIndex);
+    console.log(checkedDrinkIndex);
+    
+    fromCheckboxToBurger(checkedBurgerIndex);
+    fromCheckboxToDrink(checkedDrinkIndex);
+
 }
 
 function buttonFunction2(){
@@ -143,7 +190,7 @@ document.body.appendChild(burgare1.info())*/
     para.appendChild(t);
     console.log('katten');
     document.body.appendChild(para);
-    
+
     var lucia = document.getElementById('chooseBurger');
     lucia.innerHTML+="STSBibllan";
 }*/
@@ -179,22 +226,22 @@ function createBurgerMenu(){
     var bildVariabel = document.createElement("img");
     for (i=0; i<burgerArray.length; i++){
         burgerMenu.innerHTML+= burgerArray[i].info() +"<br>";
-        
+
         if (burgerArray[i].isLactose()) {
             burgerMenu.innerHTML+= "Laktos" +"<br>";
         }
-        
+
         if (burgerArray[i].isGluten()) {
             burgerMenu.innerHTML+= "Gluten" +"<br>";
         }
-        
-        
+
+
         bildVariabel.setAttribute("src", burgerArray[i].pictureSrc);
         //bildVariabel.width = 70px;
         //bildVariabel.setAttribute("height", "30");
         //bildVariabel.style.width = '50px';
         burgerMenu.appendChild(bildVariabel);
-        
+
         burgerMenu.innerHTML+= "<br>";
    }
 }*/

@@ -1,6 +1,13 @@
 /* kommentarer ser ut så här ctrl shift i*/
 @media screen and (aspect-ratio: 16/9){}
 
+/*BILDER*/
+img {
+    width: 20%;
+}
+
+/*STANDARD*/
+
 body {
     font-size: 1.5em;
 }
@@ -21,22 +28,24 @@ h4 {
 }
 
 #välkomsttext {
-/*    position: absolute; */
+    position: absolute; 
+    top: 4px;
+    font-size: 2em;
+    font-family: 'Arial', sans-serif;
+    color: deeppink;
+    text-align: center;
 }
 
 #header {
     position: relative;
-    font-family: 'Arial', sans-serif;
-    color: deeppink;
-    text-align: center;
-    font-size: 1.5em;
-    border-radius: 8px;
     background-color: lightgray;
-    opacity: 0.7; 
-    /* background-image: 
+    border-radius: 8px;
+    opacity: 0.7;
+    height: 15vh;
+
+    /* background-images: 
     url("https://images.pexels.com/photos/207247/pexels-photo-207247.jpeg?w=940&h=650&auto=compress&cs=tinysrgb");*/
-    /* background-image:
-    url("https://images.pexels.com/photos/163253/wooden-fishing-pier-pier-recreation-163253.jpeg?w=940&h=650&auto=compress&cs=tinysrgb");*/
+
     background-repeat: no-repeat;
     background-position: center center;
 }
@@ -126,11 +135,6 @@ button:hover {
 }
 
 
-/*BILDER*/
-img {
-    width: 20%;
-}
-
 
 /*TESTER*/
 .testområde {
@@ -143,14 +147,14 @@ fieldset {
 }
 
 /*p {
-    font-family:  'Arial', sans-serif;
-    color: #ff0000;
-    font-size: vh;
+font-family:  'Arial', sans-serif;
+color: #ff0000;
+font-size: vh;
 }*/
 
 
 /*.bildBurgare2{
-    width: 6px;
+width: 6px;
 }*/
 
 

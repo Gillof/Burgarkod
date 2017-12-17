@@ -2,88 +2,86 @@
 <html lang="en">
     <head>
         <title>Burger Pub</title>
-	<meta charset="utf-8"/>
-    <!-- <style>
-        h1 {color:indianred;}
-        p {color: blueviolet;}
-    </style>  -->
-    <link rel="stylesheet" href="style.css">
-    <script type="text/javascript" src="menu.js"></script>
-    <script src="script.js" ></script> <!-- defer -->
+        <meta charset="utf-8"/>
+        <!-- <style>
+h1 {color:indianred;}
+p {color: blueviolet;}
+</style>  -->
+        <link rel="stylesheet" href="style.css">
+        <script type="text/javascript" src="menu.js"></script>
+        <script src="script.js"></script> <!-- defer -->
 
     </head>
-    
-    <body>
-	<!-- comment -->
 
-        
-        <section id="header">
-            <img src="https://images.pexels.com/photos/163253/wooden-fishing-pier-pier-recreation-163253.jpeg?w=940&h=650&auto=compress&cs=tinysrgb" alt="headerpic">
-             <h1 id="välkomsttext">Välkommen till Burger Pub</h1> 
- 
-        </section>
-        
+    <body>
+        <!-- comment -->
+
+
+        <div id="header">
+            <img src="https://images.pexels.com/photos/163253/wooden-fishing-pier-pier-recreation-163253.jpeg?w=940&h=650&auto=compress&cs=tinysrgb" alt="headerpic" id="headerImg"> 
+            <h1 id="välkomsttext">Välkommen till Burger Pub</h1> 
+        </div>
+
         <main>
         </main>
-        
+
         <div id="intruktioner">
             <hr> 
             <h4> <br/> Välj en bugrare och en dryck <br/><br/> </h4> 
-                        
+
         </div>
-        
+
         <div id="chooseBurger">
             <h2> Burgare </h2>
             <script>createBurgerMenu()</script>
         </div>
-        
+
         <div id="chooseDrink">
             <h2> Dryck </h2>
             <script>createDrinkMenu()</script>
-            
- <!--            <div class="dropdown">
-                <button onclick="buttonFunction2()" class="dropButton" Välj dryck></button>
-                <div id="myDropdown" class="dropdown-content">
-                     
-                </div>
-            </div>
-            <form action="">
-                <input type="radio" name="smak" value="nypon"> nypon 35:-<br>
-                <input type="radio" name="smak" value="blåbär"> blåbär 35:-<br>
-                <input type="radio" name="smak" value="lingon"> lingon 35:-
-            </form> -->
 
-            <button type="submit" onclick="buttonFunction1()"> Skicka beställning </button>
         </div>
 
-        <hr> 
+        <div id="submitButton">
+
+            <button type="submit" onclick="buttonFunction1()"onclick="buttonFunction1()"  id="knappSkickaBeställning"> Skicka beställning </button>
+
+            <!-- <script> fetchCheckedCheckboxes("chooseBurger") </script> -->
+        </div>
+        
+        <div id="The ">
+        
+        </div>
+
+        <br>
+        <hr> <br> <br>
 
         <section class="info">
-            
+
             <fieldset>
-            <p> <label for="info">Fyll i dina uppgifter</label> <br>
-                <input type="text" id="firstname" name="fn" required="required" placeholder="First name">
-                * <!-- skriven stjärna för att indikera krav-->
-                <!-- det finns också typ number och url-->
-                <a href="http://www.w3schools.com/html/html_form_input_types.asp"> här finns mer info om html-input types </a>
-            </p>
-            <p>
-                <input type="text" id="lastname" name="ln" placeholder="Last name">
-            </p>
-            <p>
-                <input type="email" id="email" name="em" required="required" placeholder="Email address">
-                * <!-- skriven stjärna för att indikera krav-->
-            </p>
-            <input type="submit" value="Submit">
+                <p> <label for="info">Fyll i dina uppgifter</label> <br>
+                    <input type="text" id="firstname" name="fn" required="required" placeholder="First name">
+                    * <!-- skriven stjärna för att indikera krav-->
+                    <!-- det finns också typ number och url-->
+                    <a href="http://www.w3schools.com/html/html_form_input_types.asp"> här finns mer info om html-input types </a>
+                </p>
+                <p>
+                    <input type="text" id="lastname" name="ln" placeholder="Last name">
+                </p>
+                <p>
+                    <input type="email" id="email" name="em" required="required" placeholder="Email address">
+                    * <!-- skriven stjärna för att indikera krav-->
+                </p>
+                <input type="submit" value="Submit">
             </fieldset>
-            
+
 
         </section>
-        
+
         <section id="dryck">
-            
+
             <h2> Dryck (andra rutan)</h2>
-            
+
             <table> <!-- allign kan centrera sätta först osv-->
                 <thead>
                     <tr>
@@ -101,7 +99,7 @@
                                 <dt> pris </dt>
                                 <dd> liten: 15:- </dd>
                                 <dd> stor: 20:- </dd>
-                
+
                             </dl>
                         </td>
                         <td>
@@ -132,15 +130,15 @@
             <br/>
             <button type="submit"> Skicka beställning </button> 
             <hr>
-            
+
         </section>
-               
-    
-        
+
+
+
         <section class="burgare" id='burgare'>
 
             <hr> <h2> Burgare (andra rutan) </h2>
-            
+
             <table>
                 <thead>
                     <tr> 
@@ -154,11 +152,11 @@
                         <td>
                             <img src="burgare1.jpg">
                             <div>Innehåller:</div>
-                                <ol> <!-- numerad lista -->
-                                    <li> kött </li>
-                                    <li> och äcklig sallad </li>
-                                    <li> <span class="gluten"> gluten </span> </li>
-                                </ol>
+                            <ol> <!-- numerad lista -->
+                                <li> kött </li>
+                                <li> och äcklig sallad </li>
+                                <li> <span class="gluten"> gluten </span> </li>
+                            </ol>
                         </td>
                         <td>
                             <img id="bildBurgare2" src="burgare2.jpg">
@@ -182,10 +180,10 @@
                     </tr>
                 </tbody>        
             </table>                   
-            
+
         </section>
         <section class="testområde">
-            
+
             <hr>
             <h2> Här under testas massa saker för skojs skull</h2>
             <div>
@@ -193,7 +191,7 @@
                     <dt> äcklig </dt>
                     <dd> dryck 1: 15:- </dd>
                     <dd> dryck 2: 20:- </dd>
-                
+
                     <dt> jättegod </dt>
                     <dd> dryck 3: 35:- </dd>
                     <dd> dryck 4: 40:- </dd>
@@ -209,7 +207,7 @@
                     <option value="banan"> banan: 120:- </option>
                 </select>
             </p> 
-            
+
             <textarea rows="4" cols="75" maxlength="250">
                 Här är en textruta...
             </textarea>
@@ -224,7 +222,7 @@
             <br />
         </section>
         <section id="contact">
-            
+
             <form>
                 <fieldset>
                     fieldset gör rutan. detta är contact-stället i koden
@@ -239,17 +237,30 @@
             &lt;
             <button onclick="myFunction()">Try it</button>
         </section>
-        
-                <!-- TESTGREJER HÄR UNDER.-->
-                <!-- testar att ändra divs -->
+
+        <!-- TESTGREJER HÄR UNDER.-->
+        <!-- testar att ändra divs -->
         <br>
         <div id="testdiv">
             Det här är en testruta för knapparna under. Jag testade det här med att ändra en div.
         </div>
         <button onclick="functionTextTillDiv()">Lägg till text i testDiv</button>
         <button onclick="functionTömDiv()">Töm testDiv-rutan</button>
-        
+
     </body>
 </html>
 
-                            <!-- <img src="http://images.digopaul.com/wp-content/uploads/related_images/2015/10/28/buger_2.jpg" alt="burgare1" title="Köttburgare 1" width="100"> -->
+<!-- <img src="http://images.digopaul.com/wp-content/uploads/related_images/2015/10/28/buger_2.jpg" alt="burgare1" title="Köttburgare 1" width="100"> -->
+
+<!-- kommentar från dryckskapande
+<div class="dropdown">
+<button onclick="buttonFunction2()" class="dropButton" Välj dryck></button>
+<div id="myDropdown" class="dropdown-content">
+
+</div>
+</div>
+<form action="">
+<input type="radio" name="smak" value="nypon"> nypon 35:-<br>
+<input type="radio" name="smak" value="blåbär"> blåbär 35:-<br>
+<input type="radio" name="smak" value="lingon"> lingon 35:-
+</form> -->
