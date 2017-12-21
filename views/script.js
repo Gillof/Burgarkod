@@ -1,3 +1,32 @@
+
+var vm = new Vue({
+    el: '#main',
+    data: {
+        vueVariabel: 'Vue burgare'
+    },
+    methods: {
+        markDone: function() {
+            window.alert("den är marked done");
+            buttonFunction1("chooseBurger");
+        }
+    }
+})
+
+/*var vm = new Vue({
+    el: '#myID',
+        mixins: [sharedVueStuff],
+    data: {
+        arbitraryVariableName: 'Vue burgare'+ new Date(),
+        booleanExpression: true
+    },
+    methods: {
+        markDone: function(orderid) {
+            window.alert:("den är marked done");
+        }
+
+    }
+})*/
+createBurgerMenu();
 function createBurgerMenu(){
     var burgerMenu = document.getElementById("chooseBurger");
     var bildVariabel = document.createElement("img");
@@ -22,6 +51,7 @@ function createBurgerMenu(){
     }
 }
 
+createDrinkMenu();
 function createDrinkMenu(){
     var burgerMenu = document.getElementById("chooseDrink");
     var bildVariabel = document.createElement("img");
@@ -43,6 +73,7 @@ function createDrinkMenu(){
         createCheckbox("chooseDrink", i);
         burgerMenu.innerHTML+= "<br>";
         burgerMenu.innerHTML+= "<br>";
+        burgerMenu.innerHTML+= "<br>";
     }
 }
 
@@ -50,7 +81,8 @@ function createCheckbox(menuName, IDnr){
     var drinkMenu = document.getElementById(menuName);
     var checkbox=document.createElement("input");
     checkbox.type = "checkbox";
-    checkbox.name = "name";
+    checkbox.name = "item[]";
+    checkbox.value= menuName+"_"+IDnr;
     checkbox.id = menuName+"_"+IDnr; /*"checkboxID";*/
 
     var label = document.createElement("label");
@@ -84,13 +116,15 @@ function fetchCheckedCheckboxes(menuName){
 
 function fromCheckboxToBurger(checkedBurgerIndex){
     for (i=0; i<checkedBurgerIndex.length; i++){
-        console.log(food[checkedBurgerIndex[i]]);
-    }
+        /*console.log(food[checkedBurgerIndex[i]]);*/
+        console.log(food[checkedBurgerIndex[i]].name);
+    }  
 }
 
 function fromCheckboxToDrink(checkedDrinkIndex){
     for (i=0; i<checkedDrinkIndex.length; i++){
-        console.log(drink[checkedDrinkIndex[i]]);
+        /*console.log(drink[checkedDrinkIndex[i]]);*/
+        console.log(drink[checkedDrinkIndex[i]].name);
     }    
 }
 
@@ -99,14 +133,14 @@ function fromCheckboxToDrink(checkedDrinkIndex){
 /*var knappSkickaBeställning = document.getElementbyId("knappSkickaBeställning");
 knappSkickaBeställning.onclick= buttonFunction1();*/
 function buttonFunction1(){
-    
+
     var checkedBurgerIndex = fetchCheckedCheckboxes("chooseBurger");
     var checkedDrinkIndex =    fetchCheckedCheckboxes("chooseDrink");
-    
-    console.log("Dessa är iklickade");
+
+    /*console.log("Dessa är iklickade");
     console.log(checkedBurgerIndex);
-    console.log(checkedDrinkIndex);
-    
+    console.log(checkedDrinkIndex);*/
+
     fromCheckboxToBurger(checkedBurgerIndex);
     fromCheckboxToDrink(checkedDrinkIndex);
 
